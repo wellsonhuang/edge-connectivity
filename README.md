@@ -1,19 +1,19 @@
 # edge-connectivity
-In a computer network a link L, which interconnects two servers, is considered critical if there are at least two servers A and B such that all network interconnection paths between A and B pass through L. Removing a critical link generates two disjoint sub–networks such that any two servers of a sub–network are interconnected.
-It is known that:
-1. the connection links are bi–directional
-2. a server is not directly connected to itself
-3. two servers are interconnected if they are directly connected or if they are interconnected with the same server
-4. The network can have stand–alone sub–networks
-Write a program that finds all critical links of a given computer
-network.
 
+The edge connectivity of an undirected graph is the minimum number k of edges that must be removed to disconnect the graph. 
+For example, the edge connectivity of a tree is 1, and the edge connectivity of a cyclic chain of vertices is 2.
+Determine the edge connectivity of an undirected graph G = (V, E) by running a maximum-flow algorithm on at most |V| flow networks,
+each having O(V) vertices and O(E) edges.
 
-Input:
-The first line contains a positive integer n which is the number of
-network servers.
-The next k lines until EOF are randomly ordered and show the way
-servers are connected.
+Input: 第一行為一正整數字 n，代表點的個數，第二行開始代表邊 <u, v>
+6 
+<br>01 
+<br>12 
+<br>20 
+<br>34 
+<br>45 
+<br>53 
+<br>03
 
 Output:
-Prints all critical links in network increasingly.
+1
